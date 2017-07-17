@@ -1,20 +1,16 @@
-// Get userprefs
-    var prefs = new gadgets.Prefs();
-
-    // Get the array of search terms entered by the user
-    var terms = prefs.getArray("mylist");
+function main()
+{
+    var prefs = new gadges.Prefs();
+    name = prefs.GetString("name");
     var html = "";
 
-    // If the user has not added any terms yet, display message.
-    if (terms.length == 0)
+    if(name)
     {
-      html += "Edit the userprefs to add terms.";
+        html = "<h1>" + name + "</h1>";
     }
-    else {
-      html += "Your terms are:<br /><br />";
-      for (var i = 0; i < terms.length ; i++) {
-        var term = (terms[i]);
-        html += term + "<br />";
-      }
+    else
+    {
+        html = "test name";
     }
-    document.getElementById("content_div").innerHTML = html;
+     document.getElementById("content_div").innerHTML = html;
+}

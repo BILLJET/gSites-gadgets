@@ -1,38 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs
-    title="List Data Type Example"
-    scrolling="true"/>
-  <UserPref name="mylist"
-    display_name="Add Terms"
-    datatype="list" />
-  <Content type="html">
-  <![CDATA[
-  <div id=content_div></div>
+<ModulePrefs title="Trevor Does Tricks" height="300">
+  <Require feature="flash" />
+</ModulePrefs>
+<Content type="html">
+<![CDATA[
 
-  <script type="text/javascript">
-    // Get userprefs
-    var prefs = new gadgets.Prefs();
+<style type="text/css">
+  input.mybutton
+  {
+     background-color:#FFCC99;
+     border-style:solid;
+     border-color:#000000;
+     font-family:Comic Sans MS,sans-serif;
+     font-size:14px;
+  }
+</style>
 
-    // Get the array of search terms entered by the user
-    var terms = prefs.getArray("mylist");
-    var html = "";
+<div id="flashcontainer" style="text-align: center;"></div>
 
-    // If the user has not added any terms yet, display message.
-    if (terms.length == 0)
-    {
-      html += "Edit the userprefs to add terms.";
-    }
-    else {
-      html += "Your terms are:<br /><br />";
-      for (var i = 0; i < terms.length ; i++) {
-        var term = (terms[i]);
-        html += term + "<br />";
-      }
-    }
-    document.getElementById("content_div").innerHTML = html;
+<script type="text/javascript">
+
+  // Display still photo.
+  function showPhoto() {
+    document.getElementById("flashcontainer").innerHTML = "<img src='http://doc.examples.googlepages.com/Trevor.JPG' />";
+  }
+
+  // Play .swf file for specified trick.
+  function doTrick(trick) {
+
+    // The URL for the .swf file that shows the specified trick.
+    var url = "http://doc.examples.googlepages.com/Trevor-"+trick+".swf";
+
+    // Play .swf file.
+      gadgets.flash.embedFlash(url, "flashcontainer", {
+      swf_version: 6,
+      id: "flashid",
+      width: 300,
+      height: 250
+    })
+  }
+
+  // When gadget first loads, display still photo.
+  gadgets.util.registerOnLoadHandler(showPhoto);
   </script>
-
+  <br />
+  <div style="text-align: center;">
+    <input type=submit class="mybutton" value="Spin" onClick="doTrick('spin')">
+    <input type=submit class="mybutton" value="Speak" onClick="doTrick('speak')">
+    <input type=submit class="mybutton" value="Sit" onClick="doTrick('sit')">
+    <input type=submit class="mybutton" value="Down" onClick="doTrick('down')">
+    <input type=submit class="mybutton" value="Stop" onClick="showPhoto()">
+  </div>
   ]]>
-  </Content>
+</Content>
 </Module>

@@ -10,11 +10,11 @@
 
   <script type="text/javascript">
     main();
-
+    
     function main()
     {
-        var prefs = new gadges.Prefs();
-        name = prefs.getString("name");
+        var prefs = new gadgets.Prefs();
+        name = prefs.GetString("name");
         var html = "";
 
         if(name)

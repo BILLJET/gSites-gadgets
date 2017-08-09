@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="example" />
+  <UserPref name="myname" display_name="URL" required="true" />
+  <Content type="html">
+     <![CDATA[ 
+      <!doctype html>
+<html>
+    <head>
+        <style>
+            #box{
+                width: 1150px;
+                overflow: hidden;
+            }
+            #wrap { 
+                width: 1150px; 
+                height: 890px; 
+                padding: 0; 
+                overflow: hidden;
+             }
+            #frame { 
+                width: 1280px;
+                height: 810px;
+                border: 0;
+                -ms-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -o-transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+
+                -ms-transform-origin: 0 0;
+                -moz-transform-origin: 0 0;
+                -o-transform-origin: 0 0;
+                -webkit-transform-origin: 0 0;
+                transform-origin: 0 0; 
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div id="wrap">
+                <iframe id="frame" src=""></iframe>
+            </div>
+        </div>
+    </body>
+	
+				<script type="text/javascript">
+				   var prefs = new gadgets.Prefs();
+
+				   function displayGreeting () {     
+					 var html = "";
+										
+					 var element = document.getElementById('frame').src = prefs.getString("myname");
+					 
+				   }   
+				   gadgets.util.registerOnLoadHandler(displayGreeting);
+			   </script>
+</html>
+     ]]>
+  </Content> 
+</Module>

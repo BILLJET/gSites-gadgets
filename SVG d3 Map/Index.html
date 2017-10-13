@@ -1,0 +1,171 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>GSite area map d3</title>
+        
+        <style>
+            .svgContainer{
+                transform: scale(0.8);
+                -webkit-transform: scale(0.8);
+            }
+            .hexagon {
+            stroke: #000;
+            stroke-width: 0.5px;
+            }
+            .siteText{
+                fill: #FFF;
+                font: 32px Helvetica, Arial, Sans-Serif;
+            }
+            .hex{
+                fill: #4f81c0;
+            }
+            .hexLink:hover
+            .hex{
+                fill: #4F81DB;
+            }
+            .containerSVG{
+                width: 600px;
+                height: 500px;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="containerSVG">
+        </div>
+        <?!= include("d3.js"); ?>
+        <script>
+            var startBixHexPoints = createHexStartPoints([[300,420],[535,285],[770,145],[770,420],[1005,285],[535,555],[1005,555],[770,695],[535,830],[1005,830]]); //To create new one add new start hexagon point 
+            createSvgSiteMap();
+            
+            
+            function createSvgSiteMap(){
+                var allBigHexagonPoints = [];
+                generateAllPointsOfHexagon(allBigHexagonPoints);
+                drawHexagon = d3.svg.line()
+                                    .x(function(d) { return d.x; })
+                                    .y(function(d) { return d.y; });
+                var svgContainer = d3.select(".containerSVG")
+                                        .append("svg")
+                                        .attr('preserveAspectRatio','xMinYMin meet')
+                                        .attr('viewBox','0 0 860 700')
+                                        .attr('display','block')
+                                        .attr('position','absolute')
+                                        .attr('top',0)
+                                        .attr('left',0)
+                                        .attr('width','100%')
+                                        .attr('height','100%')
+                                        .append("g")
+                                        .attr("class","svgContainer");
+                generateBigHexagon(countOfSites(), svgContainer, allBigHexagonPoints, "hex");
+                addTextToHexagon(svgContainer,allBigHexagonPoints);
+            }
+            function createHexStartPoints(points){
+               var startPoints =[];
+               for(var i=0;i<points.length;i++)
+               {
+                    startPoints.push({"x":points[i][0],"y":points[i][1]});
+               }
+               return startPoints;
+           }
+
+            function generateAllPointsOfHexagon(allBigHexagonPoints){
+                for(var i=0;i<startBixHexPoints.length;i++){
+                    allBigHexagonPoints.push(generatePointOfBigHexagon(startBixHexPoints[i])); 
+                }
+            }
+            function generatePointOfBigHexagon(startPoint){
+                var points = [
+                    {"x": startPoint.x , "y":startPoint.y},
+                    {"x": startPoint.x-75 , "y":startPoint.y+130},
+                    {"x": startPoint.x-225 , "y":startPoint.y+130},
+                    {"x": startPoint.x-300 , "y":startPoint.y},
+                    {"x": startPoint.x-225 , "y":startPoint.y-130},
+                    {"x": startPoint.x-75 , "y":startPoint.y-130},
+                    {"x": startPoint.x , "y":startPoint.y}
+                ];
+                return points;
+            }
+
+            function generateBigHexagon(count,svgContainer,hexPoints, bigHexClass){
+                for(var i=0;i<count;i++){
+                var enterElements = 
+                svgContainer.append("a")
+                            .attr("class","hexLink")
+                            .attr("href","#")
+                            .attr("target","_top")
+                            .append("g")
+                            .attr("class","nodes")
+                            .append("path")
+                            .attr("d", drawHexagon(hexPoints[i]))
+                            .attr("class",bigHexClass);         
+            }
+            }
+            
+            function addTextToHexagon(svgContainer, allBigHexagonPoints){
+              <? for(var i=0; i< sitesData.length; i++) {?>
+                var txt = <?= sitesData[i].name ?>;
+                var resultCutText = getWhiteSpacesToCutText(txt);
+                var countOfTimes = resultCutText[1];
+                var whiteSpaces = resultCutText[0];
+                var enterElements =
+                    svgContainer.selectAll("a")
+                                .filter(function(d,j) {return j==<?= i ?>})
+                                .attr("href",<?= sitesData[i].url ?>);
+                    
+                    for(var j=0;j<countOfTimes+1;j++){
+                      var text = 
+                      svgContainer.selectAll(".nodes")
+                                  .filter(function(d,j){return j==<?= i ?>})
+                                  .append("text")
+                                  .attr("text-anchor", "middle")
+                                  .attr("class","siteText")
+                                  .attr("x",getXPositionForTextHexagon(allBigHexagonPoints[<?= i ?>]))
+                                  .attr("y",getYPositionForTextHexagon(allBigHexagonPoints[<?= i ?>],countOfTimes, j))
+                                  .text(txt.substring(whiteSpaces[j], whiteSpaces[j+1]));
+                    }
+              <? } ?>
+            }
+             function getWhiteSpacesToCutText(key){
+                var count = [1,0];
+                var whiteSpaces = [];
+                if(key.length > 10){ 
+                    var whiteSpace = getAllWhiteSpaces(key);
+                    whiteSpaces.push(0);
+                    for(var i=0;i<whiteSpace.length;i++){
+                        if(whiteSpace[i]/count[0] > 10){
+                            count[0]++;
+                            i>0?whiteSpaces.push(whiteSpace[i-1]):whiteSpaces.push(whiteSpace[i]);
+                            count[1]++;
+                        }
+                    }
+                    whiteSpaces.push(key.length);
+                }
+                return [whiteSpaces, count[1]];
+            }
+            function getAllWhiteSpaces(key){
+                var keyCopy = key;
+                var whiteSpace = [];
+                    while(keyCopy.indexOf(" ") != -1)
+                    {
+                        whiteSpace.push(parseInt([keyCopy.indexOf(" ")]));
+                        keyCopy = keyCopy.substring(keyCopy.indexOf(" ")+1);
+                    }
+                    for(var i=1; i< whiteSpace.length;i++){
+                        whiteSpace[i] = whiteSpace[i-1]+whiteSpace[i] + 1;
+                    }
+                return whiteSpace;
+            }
+            function getXPositionForTextHexagon(hexagonPoints){
+                return ((hexagonPoints[0].x - hexagonPoints[3].x)/2 + hexagonPoints[3].x); 
+            }
+            function getYPositionForTextHexagon(hexagonPoints, countOfTimes, i){
+                return (hexagonPoints[3].y-20*countOfTimes+45*i);
+            }
+            function countOfSites(){
+                var count = parseInt(<?= sitesData.length ?>);
+                return count;
+            }
+        </script>
+    </body>
+</html>

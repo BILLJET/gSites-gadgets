@@ -18,3 +18,7 @@ Change value for variable sheetId and will be worked.
 
 The variable for new spread sheet is contained in each hyperlink:
 https://docs.google.com/spreadsheets/d/1I38CMuP4Axk-tGBvpRUy28NKE-pBfwRuBihE4orCvqg/edit#gid=0 
+
+
+For more information, see: 
+https://developers.google.com/apps-script/overview

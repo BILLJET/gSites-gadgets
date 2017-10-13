@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="gSheet View" directory_title="gSheet View" title_url="__UP_Url__" height="600" scaling="false" description="gSheet preview as table" author="Leszek Boroch" author_email="leszek.boroch+no_spam@billennium.pl" category="tools" />
+    <UserPref name="Title" display_name="Title" default_value="View name" datatype="string" required="true"/>
+    <UserPref name="Height" display_name="Gadget Height" datatype="string" default_value="600"/>
+    <UserPref name="Url" display_name="Viewer URL" default_value="" datatype="string" required="true"/>
+    <UserPref name="Id" display_name="SpreadSheet Id" default_value="" datatype="string" required="true"/>
+    <UserPref name="SheetName" display_name="Sheet Name" default_value="Sheet name" datatype="string" required="true"/>
+    <UserPref name="FilterColumn" display_name="Filter Column (letter)" default_value="I" datatype="string" required="false"/>
+    <UserPref name="FilterValue" display_name="Filter Value" default_value="CLOSED" datatype="string" required="false"/>
+    <UserPref name="FilterType" 
+         display_name="Filter type: Exclude - all but filtered values, Include - only filtered values"
+         datatype="enum"
+         default_value="0" required="true">
+      <EnumValue value="0" display_value="exclude"/>
+      <EnumValue value="1" display_value="include"/>
+    </UserPref>
+    <UserPref name="Columns" display_name="Columns to show (letters separated by comma, empty = all)" default_value="" datatype="string" required="false"/>
+  <Content type="html">
+  <![CDATA[
+
+  <div id="urlframe" align="left"></div>
+
+  <script type="text/javascript">
+  /* ======================================= */
+  /*          gSeet View Gadget              */
+  /* ======================================= */
+  /*                                         */
+  /*                                         */
+  /*   © 2017 Leszek Boroch                  */
+  /*                                         */
+  /*   leszek.boroch@contractors.roche.com   */
+  /*   leszek.boroch@billennium.pl           */
+  /*                                         */
+  /* ======================================= */
+  var prefs = new gadgets.Prefs();
+  var frameheight = prefs.getString("Height");
+  var url = prefs.getString("Url");
+  var id = prefs.getString("Id");
+  var sheetname = prefs.getString("SheetName");
+  var filtertype = prefs.getString("FilterType");
+  var filtercolumn = prefs.getString("FilterColumn");
+  var filtervalue = prefs.getString("FilterValue");
+  var columns = prefs.getString("Columns");
+  var el = document.getElementById("urlframe");
+  var out  = '<iframe src="'+url+'?SheetName='+sheetname+'&Id='+id;
+  if (columns != "") out += '&Columns='+columns;
+  if (filtervalue != "" && filtervalue != "") out += '&FilterType='+filtertype+'&FilterColumn='+filtercolumn+'&FilterValue='+filtervalue;
+  out += '" frameborder="0" style="width: 100%; height: '+frameheight+'px" scrolling="auto"><p>Your browser does not support iframes.</p></iframe>';
+ window.console&&console.log(out);
+  el.innerHTML=out; 
+
+</script>
+
+]]>
+  </Content>
+</Module>

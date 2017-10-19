@@ -9,7 +9,7 @@ function PostService() {
   
   function getSheet(){
     var spreadsheet = SpreadsheetApp.openById(sheetId);
-    var sheet = spreadsheet.getSheets()[0];
+    var sheet = spreadsheet.getSheetByName(SitesApp.getActivePage().getUrl());
     return sheet;
   }
 

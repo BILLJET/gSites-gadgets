@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head><!--
+/* ======================================= */
+/*               gSeet View                */
+/* ======================================= */
+/*                                         */
+/*                                         */
+/*   © 2017 Leszek Boroch                  */
+/*                                         */
+/*   leszek.boroch@contractors.roche.com   */
+/*   leszek.boroch@billennium.pl           */
+/*                                         */
+/* ======================================= */-->
+<style>
+body {
+    font-size: 13px;
+    position: relative;
+    background: #fff;
+    font-family: Helvetica,Arial,Sans-Serif;
+    color: #454545;
+    padding: 0;
+    margin: 0px auto;
+}
+h1 {
+    font-size: 32px;
+    margin: 20px 0px;
+    margin-bottom: 5px;
+}
+p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#topbar{
+    width: 100%;
+    height: 120px;
+    background-color: #161661;
+    color: #d4bcbc;
+}
+#topbar-content{
+    position: relative;
+    padding: 0;
+    padding-top: 6px;
+    width: 850px;
+    margin: 0px auto;
+    color: #d4bcbc;
+}
+#content{
+    position: relative;
+    padding: 0;
+    width: 850px;
+    margin: 0px auto;
+}
+#roche-logo{
+    float: right;
+    clear: both;
+    margin-top: 27px;
+}
+</style>
+</head>
+<body class="bodyclass">
+<div id='topbar'>
+    <div id='topbar-content'>
+        <div id='roche-logo'><img src="data:image/png;base64,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"></div>
+        <h1>Spreadsheet View</h1>
+    </div>
+</div>
+<div id="content">
+    <br><br><br><br>
+    <p><b>Oooops! Something went wrong!</b></p>
+    <br><br><br><br>
+</div>
+</body>
+</html>

@@ -1,14 +1,8 @@
-// config gSheet ID
 var sheetId = "1I38CMuP4Axk-tGBvpRUy28NKE-pBfwRuBihE4orCvqg";
 
 function doGet() {
-  var html = HtmlService.createTemplateFromFile("index");
-  try {
-    html.sitesData = getAllRecordsFromSheet();
-  } catch(err) {
-    var ee = HtmlService.createTemplateFromFile('error');
-    return ee.evaluate().setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL).setTitle("gSiteMapHoneycomb");  
-  }
+  var html = HtmlService.createTemplateFromFile("Index");
+  html.sitesData = getAllRecordsFromSheet();
   return html.evaluate();
 }
 

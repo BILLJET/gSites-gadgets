@@ -50,13 +50,13 @@
   var filtercolumn = prefs.getString("FilterColumn");
   var filtervalue = prefs.getString("FilterValue");
   var sortcolumn = prefs.getString("SortColumn");
-  var sortvalue = prefs.getString("SortValue");
+  var sortorder = prefs.getString("SortOrder");
   var columns = prefs.getString("Columns");
   var el = document.getElementById("urlframe");
   var out  = '<iframe src="'+url+'?SheetName='+sheetname+'&Id='+id;
   if (columns != "") out += '&Columns='+columns;
   if (filtercolumn != "" && filtervalue != "") out += '&FilterType='+filtertype+'&FilterColumn='+filtercolumn+'&FilterValue='+filtervalue;
-  if (sortcolumn != "") out += '&SortColumn='+sortcolumn+'&SortValue='+sortvalue;
+  if (sortcolumn != "") out += '&SortColumn='+sortcolumn+'&SortOrder='+sortorder;
   out += '" frameborder="0" style="width: 100%; height: '+frameheight+'px" scrolling="auto"><p>Your browser does not support iframes.</p></iframe>';
  window.console&&console.log(out);
   el.innerHTML=out; 

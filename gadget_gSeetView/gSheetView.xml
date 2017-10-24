@@ -15,7 +15,7 @@
       <EnumValue value="0" display_value="exclude"/>
       <EnumValue value="1" display_value="include"/>
     </UserPref>
-    <UserPref name="SortColumn" display_name="Initial sorting Column (letter - empty: default A)" default_value="" datatype="string" required="false"/>
+    <UserPref name="SortColumn" display_name="Initial sorting column index (number - empty/default = 1)" default_value="" datatype="string" required="false"/>
     <UserPref name="SortOrder" 
          display_name="Sort Order: asc - ascending, desc - descending"
          datatype="enum"

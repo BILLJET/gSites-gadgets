@@ -5,6 +5,7 @@
     <UserPref name="Url" display_name="Viewer URL" default_value="https://" datatype="string" required="true"/>
     <UserPref name="Id" display_name="SpreadSheet ID (part of URL)" default_value="" datatype="string" required="true"/>
     <UserPref name="SheetName" display_name="Sheet name" default_value="Sheet name" datatype="string" required="true"/>
+    <UserPref name="Columns" display_name="Columns to show (letters separated by comma, empty = all)" default_value="" datatype="string" required="false"/>
     <UserPref name="FilterColumn" display_name="Filter column (letter)" default_value="" datatype="string" required="false"/>
     <UserPref name="FilterValue" display_name="Filter value(s) - if more than one separate with | (pipe) character" default_value="" datatype="string" required="false"/>
     <UserPref name="FilterType" 
@@ -14,7 +15,6 @@
       <EnumValue value="0" display_value="exclude"/>
       <EnumValue value="1" display_value="include"/>
     </UserPref>
-    <UserPref name="Columns" display_name="Columns to show (letters separated by comma, empty = all)" default_value="" datatype="string" required="false"/>
     <UserPref name="SortColumn" display_name="Initial sorting column index (number - empty/default = 1)" default_value="" datatype="string" required="false"/>
     <UserPref name="SortOrder" 
          display_name="Sort Order: asc - ascending, desc - descending"

@@ -6,7 +6,7 @@
     <UserPref name="Url" display_name="Viewer URL" default_value="" datatype="string" required="true"/>
     <UserPref name="Id" display_name="SpreadSheet ID (part of URL)" default_value="" datatype="string" required="true"/>
     <UserPref name="SheetName" display_name="Sheet name" default_value="Sheet name" datatype="string" required="true"/>
-    <UserPref name="FilterColumn" display_name="Filter column (letter)" default_value="I" datatype="string" required="false"/>
+    <UserPref name="FilterColumn" display_name="Filter column (letter)" default_value="" datatype="string" required="false"/>
     <UserPref name="FilterValue" display_name="Filter value" default_value="" datatype="string" required="false"/>
     <UserPref name="FilterType" 
          display_name="Filter type: Exclude - all but filtered values, Include - only filtered values"

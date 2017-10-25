@@ -52,7 +52,7 @@
   var sortorder = prefs.getString("SortOrder");
   var columns = prefs.getString("Columns");
   var el = document.getElementById("urlframe");
-  var out  = '<iframe src="'+encodeURIComponent(url)+'?SheetName='+encodeURIComponent(sheetname)+'&Id='+encodeURIComponent(id);
+  var out  = '<iframe src="'+url+'?SheetName='+encodeURIComponent(sheetname)+'&Id='+encodeURIComponent(id);
   if (columns != "") out += '&Columns='+encodeURIComponent(columns);
   if (filtercolumn != "" && filtervalue != "") out += '&FilterType='+encodeURIComponent(filtertype)+'&FilterColumn='+encodeURIComponent(filtercolumn)+'&FilterValue='+encodeURIComponent(filtervalue);
   if (sortcolumn != "") out += '&SortColumn='+encodeURIComponent(sortcolumn)+'&SortOrder='+encodeURIComponent(sortorder);

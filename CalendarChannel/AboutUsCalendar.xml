@@ -1,7 +1,11 @@
 <!doctype html>
+
+
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
+
     <style>
         ul{
             list-style: none;
@@ -11,7 +15,7 @@
         .tabsMenu{
             display: inline-flex;
             border-bottom: 1px solid #ddd;
-            width:390px;
+            width:265px;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 0.9em;
             margin-bottom: 10px;
@@ -30,16 +34,16 @@
             border-left: 1px solid #ddd;
             margin-right: 3px;
             text-decoration: none;
-            background-color: #0066cc;
+            background-color: #30913d;
             color: #fff;
-            width: 77px;
+            width: auto;
         }
         .tabsLink:hover{
             text-decoration: none;
-            background-color: #0066cc;
+            background-color: #2A7F36;
         }
         #tabs{
-            width:390px;
+            width:270px;
         }
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -50,27 +54,23 @@
         } );
     </script>
 </head>
-<body style="width:390px;height:375px;border:solid 1px black;">
+
+<body>
 
     <div id="tabs">
         <ul class="tabsMenu" >
-            <li><a href="#tabs-1" class="tabsLink" style="width:67px;">SAP</a></li>
-            <li><a href="#tabs-2" class="tabsLink" style="width:87px;">Cross Tech</a></li>
-            <li><a href="#tabs-3" class="tabsLink" style="width:87px;">Commercial</a></li>
-            <li><a href="#tabs-4" class="tabsLink" style="width:67px;">BI/EAI</a></li>
+            <li><a href="#tabs-1" class="tabsLink">Upcoming Events</a></li>
+            <li><a href="#tabs-2" class="tabsLink">Calendar view</a></li>
         </ul>
         <div id="tabs-2">
-                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;height=320&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=roche.com_rrt6giujl2g5sp266p1pbc21i8%40group.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FMadrid" style="border-width:0" width="387" height="320" frameborder="0" scrolling="no"></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;height=320&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=roche.com_rrt6giujl2g5sp266p1pbc21i8%40group.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FMadrid" style="border-width:0" width="250" height="320" frameborder="0" scrolling="no"></iframe>
         </div>
         <div id="tabs-1">
-                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=320&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=roche.com_rrt6giujl2g5sp266p1pbc21i8%40group.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FMadrid" style="border-width:0" width="387" height="320" frameborder="0" scrolling="no"></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=320&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=roche.com_rrt6giujl2g5sp266p1pbc21i8%40group.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FMadrid" style="border-width:0" width="250" height="320" frameborder="0" scrolling="no"></iframe>
         </div>
-        <div id="tabs-3">
-                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=320&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=roche.com_rrt6giujl2g5sp266p1pbc21i8%40group.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FMadrid" style="border-width:0" width="387" height="320" frameborder="0" scrolling="no"></iframe>
-        </div>
-        <div id="tabs-4">
-                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showDate=0&amp;showTabs=0&amp;showCalendars=0&amp;height=320&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=roche.com_rrt6giujl2g5sp266p1pbc21i8%40group.calendar.google.com&amp;color=%23125A12&amp;ctz=Europe%2FMadrid" style="border-width:0" width="387" height="320" frameborder="0" scrolling="no"></iframe>
-        </div>        
     </div>
+
+    
 </body>
+
 </html>

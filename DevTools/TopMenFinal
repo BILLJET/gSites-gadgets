@@ -57,7 +57,7 @@
   </head>
   <body>
   <div id="logo">
-    <a target="_self" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/">
+    <a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/">
        <img src="https://sites.google.com/a/contractors.roche.com/devtoolstest/logo2.png"/>
     </a>
     </div>

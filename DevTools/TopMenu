@@ -62,7 +62,7 @@
     </a>
     </div>
     <ul class="flex-container">
-			       <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/ams">AMS</a>
+			       <li class="flex-item"><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/ams">AMS</a>
       
             <!-- If you want remove 'New' icon-> delete line below -->
             <img src="https://sites.google.com/a/contractors.roche.com/devtoolstest/new-icon.png" style="height:17px"/> 
@@ -70,15 +70,15 @@
             </li>
 
             <li class="flex-item"><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Artifactory">Artifactory</a></li>
-            <li class="flex-item"><a target="_parent" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Bamboo">Bamboo</a></li>
-            <li class="flex-item"><a target="_blank" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Bitbucket">Bitbucket</a></li>
-            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/cds">CDS</a></li>
-            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/elk">ELK</a></li>
-            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/FishEye">FishEye & Crucible</a></li>
-            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/RocheWIKI">Roche Wiki</a></li>
-            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Jira">Jira</a></li>
-            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/SVN">SVN (Subversion)</a></li>
-            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Webforms">Webforms</a></li>
+            <li class="flex-item"><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Bamboo">Bamboo</a></li>
+            <li class="flex-item"><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Bitbucket">Bitbucket</a></li>
+            <li class="flex-item"><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/cds">CDS</a></li>
+            <li class="flex-item"><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/elk">ELK</a></li>
+            <li class="flex-item"><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/FishEye">FishEye & Crucible</a></li>
+            <li class="flex-item"><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/RocheWIKI">Roche Wiki</a></li>
+            <li class="flex-item"><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Jira">Jira</a></li>
+            <li class="flex-item"><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/SVN">SVN (Subversion)</a></li>
+            <li class="flex-item"><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Webforms">Webforms</a></li>
 </ul>
   </body>
 </html>

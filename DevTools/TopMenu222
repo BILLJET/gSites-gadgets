@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-  <ModulePrefs title="Menu" height=auto />
+  <ModulePrefs title="Menu" height="dynamic-height" />
   <Content type="html">
      <![CDATA[ 
 <!doctype html>

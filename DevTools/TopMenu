@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="Menu" />
+  <Content type="html">
+     <![CDATA[ 
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Top Menu- DevTools</title>
+    
+ <style>
+.flex-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  list-style: none;  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  list-style: none;
+  margin: 0px 25px;
+   padding: 5px 10px;
+  font-size: 16px!important;
+  text-align: center;
+}
+
+.flex-item a{
+  color: #999999!important;
+    font-family: 'Droid Sans',sans-serif!important;
+    font-size: 16px!important;
+   text-decoration: none;
+}
+
+.flex-item a:hover {
+    color: #444444!important;
+    text-decoration: underline;
+    background-color: transparent;
+
+#logo{
+    text-align: left;
+    margin: 15px 30px;
+    margin-top: 0;
+  }
+  </style>
+  
+  </head>
+  <body>
+  <div id="logo">
+    <a target="_self" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/">
+       <img src="https://sites.google.com/a/contractors.roche.com/devtoolstest/logo2.png"/>
+    </a>
+    </div>
+    <ul class="flex-container">
+			       <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/ams">AMS</a>
+      
+            <!-- If you want remove 'New' icon-> delete line below -->
+            <img src="https://sites.google.com/a/contractors.roche.com/devtoolstest/new-icon.png" style="height:17px"/> 
+            
+            </li>
+
+            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Artifactory">Artifactory</a></li>
+            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Bamboo">Bamboo</a></li>
+            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Bitbucket">Bitbucket</a></li>
+            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/cds">CDS</a></li>
+            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/elk">ELK</a></li>
+            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/FishEye">FishEye & Crucible</a></li>
+            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/RocheWIKI">Roche Wiki</a></li>
+            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Jira">Jira</a></li>
+            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/SVN">SVN (Subversion)</a></li>
+            <li class="flex-item"><a target="_self" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Webforms">Webforms</a></li>
+</ul>
+  </body>
+</html>
+]]>
+  </Content> 
+</Module>

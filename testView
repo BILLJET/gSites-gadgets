@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="Title" />
+  <Content type="html">
+     <![CDATA[ 
+<!doctype html>
+<html lang="en">
+
+<head>
+<style type="text/css">
+td {
+	position: relative;
+}
+.title {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	z-index: 2;
+	position: absolute;
+}
+.text {
+	border: solid 2px blue;
+	border-radius: 20px;	
+	width: 100px;
+	/*min-height: 100px;*/
+	height: 100px;
+	padding: 10px;
+    font-size: 9px;
+    z-index: -1;
+	position: absolute;
+}
+.circle {
+	display:block;
+	background: #31558e;
+	border-top-left-radius: 200px;
+	width: 200px;
+	height: 200px;
+	z-index: 1;
+}
+.circle .text {
+}
+.circle .title {
+	right: 30px;
+	bottom: 50px;
+}
+td.c1:hover .circle .text {
+	background-color:#FFF;
+	color: blue;
+	font-size: 13px;
+	width: 175px;
+	height: 175px;
+	z-index: 5;
+	position: absolute;
+	text-decoration: none;
+	transition:all 1s ease;
+}
+.circle2 {
+	display:block;
+	background: blue;
+	border-top-right-radius: 200px;
+	width: 200px;
+	height: 200px;
+}
+.circle2 .text {
+	right: 0;
+}
+.circle2 .title {
+	left: 30px;
+	bottom: 50px;
+}
+td.c2:hover .circle2 .text {
+	background-color:#FFF;
+	color: #1d57b7;
+	font-size: 13px;
+	width: 175px;
+	height: 175px;
+	z-index: 5;
+	position: absolute;
+	text-decoration: none;
+	transition:all 1s ease;
+}
+.circle3 {
+	display:block;
+	background: #405475;
+	border-bottom-left-radius: 200px;
+	width: 200px;
+	height: 200px;
+}
+.circle3 .text {
+	bottom: 0;
+}
+.circle3 .title {
+	right: 30px;
+	top: 50px;
+}
+td.c3:hover .circle3 .text {
+	background-color:#fff;
+	color: blue;
+	font-size: 13px;
+	width: 175px;
+	height: 175px;
+	z-index: 5;
+	position: absolute;
+	text-decoration: none;
+	transition:all 1s ease;
+}
+
+.circle4 {
+	display:block;
+	background: #8199c1;
+	border-bottom-right-radius: 200px;
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+.circle4 .text {
+	right: 0;
+	bottom: 0;
+}
+.circle4 .title {
+	left: 30px;
+	top: 50px;
+}
+td.c4:hover .circle4 .text {
+	background-color:#FFF;
+	color: blue;
+	font-size: 13px;
+	width: 175px;
+	height: 175px;
+	z-index: 5;
+	position: absolute;
+	text-decoration: none;
+	transition:all 1s ease;
+    /*-webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    /*transition: width 2s, height 4s;*/
+}
+
+.kolko{
+	width:100px;
+	height:100px;
+	display:block;
+	/*border:solid 3px pink;*/
+	/*border-bottom-right-radius: 50px;*/
+	border-radius: 50px;
+	position: absolute;
+	left: -55px;
+	top: -55px;
+}
+/*
+.shortcut {
+	position: relative;
+	width: 0;
+	height: 0;
+	border-top: 9px solid transparent;
+	border-right: 9px solid #b30;
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+}
+.shortcut:after {
+	content: '';
+	position: absolute;
+	border: 0 solid transparent;
+	border-top: 3px solid #b30;
+	border-radius: 20px 0 0 0;
+	top: -12px;
+	left: -9px;
+	width: 12px;
+	height: 12px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+}
+.curved-arrow{
+	position: relative;
+	left: 100px;
+	top: 100px;
+	width: 0;
+	height: 0;
+	border-right: 12px solid red;
+	border-top: 12px solid transparent;
+	transform: rotate(20deg);
+}
+.curved-arrow:after{
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-right: 3px solid red;
+	border-radius: 0 30px 0 0;
+	left: -18px;
+	top: -15px;
+	transform: rotate(-45deg);
+}
+*/
+.main {
+	position: relative;
+}
+.main .round {
+	width:100px;
+	height:100px;
+	display:block;
+	/*border:solid 3px pink;*/
+	/*border-bottom-right-radius: 50px;*/
+	border-radius: 50px;
+	position: absolute;
+	left: 153px;
+	top: 153px;
+	z-index: 3;
+	animation:spin 4s linear infinite;
+
+}
+.main .curved-arrow {
+  border: 12px solid transparent;
+  border-top-color: black;
+  border-left-color: black;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin:15px auto;
+}
+.main .curved-arrow:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 80%;
+  height: 0;
+  width: 0;
+  border-left: 20px solid black;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.main .curved-arrow:hover {
+  -webkit-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  transform: rotate(315deg);
+  transition: all 0.8s;
+}
+
+@keyframes spin { 100% { /*-webkit-transform: rotate(360deg); */transform:rotate(360deg); } }
+
+</style>
+
+</head>
+<body>
+<table>
+<tr>
+<td width="50%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, nisl a convallis fermentum, mi tellus molestie est, id sodales nibh risus efficitur quam. </td>
+<td width="50%" class="main">
+	<div class="round"><div class="curved-arrow"></div></div>
+<table>
+<tr>
+<td class="c1">
+	<a class="circle" href="http://google.com">
+		<div class="title">Tekst</div>
+		<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, nisl a convallis fermentum, mi tellus molestie est, id sodales nibh risus efficitur quam. </div>
+    </a>
+</td>
+<td class="c2">
+<a class="circle2" href="http://google.com">
+		<div class="title">Tekst</div>
+		<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, nisl a convallis fermentum, mi tellus molestie est, id sodales nibh risus efficitur quam. </div>
+    </a>
+</td>
+</tr>
+<tr>
+<td  class="c3">
+<a class="circle3" href="http://google.com">
+		<div class="title">Tekst</div>
+		<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, nisl a convallis fermentum, mi tellus molestie est, id sodales nibh risus efficitur quam. </div>
+    </a>
+</td>
+<td class="c4">
+	<a class="circle4" href="http://google.com">
+		<!--div class="kolko"></div-->
+		<div class="title">Tekst</div>
+		<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mattis, nisl a convallis fermentum, mi tellus molestie est, id sodales nibh risus efficitur quam. </div>
+    </a>
+</td>
+</tr>
+</table>
+</td></tr></table>
+    
+
+</body>
+
+</html>
+]]>
+  </Content> 
+</Module>

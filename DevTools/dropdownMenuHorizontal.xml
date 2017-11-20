@@ -20,7 +20,7 @@
 /*    font-weight: bold;*/
     padding: 0;
     margin: 10px 0;
-    float: left; /* Clear floats */
+    /*float: left;*/ /* Clear floats */
     width: 100%;
     /* Bring the nav above everything else--uncomment if needed.
     position: relative;
@@ -31,6 +31,10 @@
     float: left;
     margin-right: 10px;
     /*position: relative;*/
+}
+.nav {
+    display: flex;  
+    justify-content: center;
 }
 .nav a {
     display: block;
@@ -55,6 +59,7 @@
 .nav ul {
     /*background-color: #ff0;*//* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
     /*background: rgba(255,255,255,0);*/ /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+    background-color: #fff;
     color: #999999!important;
     font-family: 'Droid Sans',sans-serif!important;
     font-size: 16px!important;

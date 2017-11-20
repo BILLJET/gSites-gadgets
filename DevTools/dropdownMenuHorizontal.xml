@@ -101,6 +101,11 @@
 @media (max-width: 1028px) {
     .nav { display: block;}
 }
+@media (max-width: 600px) {
+    .nav a {
+        font-size: 15px!important;
+    }
+}
 </style>
 </head>
 <body>

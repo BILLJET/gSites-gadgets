@@ -78,43 +78,43 @@
     <li>
         <a href="#">Continuous Integration</a>
         <ul>
-            <li><a href="#">Bitbucket</a></li>
-            <li><a href="#">Artifactory</a></li>
-            <li><a href="#">Bamboo</a></li>
-            <li><a href="#">Sonar</a></li>
+            <li><a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Bitbucket">Bitbucket</a></li>
+            <li><a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Artifactory">Artifactory</a></li>
+            <li><a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Bamboo">Bamboo</a></li>
+            <li><a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Sonar">Sonar</a></li>
         </ul>
     </li>
     <li>
         <a href="#">Team Management</a>
         <ul>
-            <li><a href="#">Confluence</a></li>
-            <li><a href="#">HipChat</a></li>
-            <li><a href="#">JIRA</a></li>
+            <li><a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Confluence">Confluence</a></li>
+            <li><a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/HipChat">HipChat</a></li>
+            <li><a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/JIRA">JIRA</a></li>
         </ul>
     </li>
     <li>
-        <a href="#">Continuous Deployment</a>
-        <ul>
-            <li><a href="#">CDS</a></li>
-        </ul>
+        <a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/CDS">Continuous Deployment</a>
+        <!--ul>
+            <li><a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/CDS">CDS</a></li>
+        </ul-->
     </li>
     <li>
-        <a href="#">Log Management</a>
-        <ul>
-            <li><a href="#">ELK</a></li>
-        </ul>
+        <a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/ELK">Log Management</a>
+        <!--ul>
+            <li><a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/ELK">ELK</a></li>
+        </ul-->
     </li>
     <li>
-        <a href="#">Monitoring</a>
-        <ul>
-            <li><a href="#">AMS</a></li>
-        </ul>
+        <a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/AMS">Monitoring</a>
+        <!--ul>
+            <li><a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/AMS">AMS</a></li>
+        </ul-->
     </li>
     <li>
-        <a href="#">Application Security</a>
-        <ul>
-            <li><a href="#">Checkmarks</a></li>
-        </ul>
+        <a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Checkmarks">Application Security</a>
+        <!--ul>
+            <li><a href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Checkmarks">Checkmarks</a></li>
+        </ul-->
     </li>
 </ul>
 <script>

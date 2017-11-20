@@ -98,9 +98,11 @@
     text-decoration: underline;
     background-color: transparent;
 }
+@media (max-width: 1028px) {
+    .nav { display: block;}
+}
 </style>
 </head>
-
 <body>
 <div id="logo">
     <a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/">

@@ -170,22 +170,22 @@
     </li>
 </ul>
 <script>
-    var url = (window.location != window.parent.location)
-                ? document.referrer
-                : document.location.href;
-    for (var i = 0; i < document.links.length; i++) {
-        if (document.links[i].href == url) {
-            document.links[i].className = 'active';
-        }
-    }
-	
 	function testUrls()
 	{
-		console.log(window.location);
-		console.log(window.parent.location);
+		//console.log(window.location);
+		//console.log(window.parent.location);
 		if (/oo7ra02ohhgfeqd1haju1rksg0qbo7vb/.test(window.location))
 		{
 			document.body.innerHTML = document.body.innerHTML.replace(/dev-tools/g,'devtoolstest');
+		}
+		
+		var url = (window.location != window.parent.location)
+					? document.referrer
+					: document.location.href;
+		for (var i = 0; i < document.links.length; i++) {
+			if (document.links[i].href == url) {
+				document.links[i].className = 'active';
+			}
 		}
 	}
 	window.onload = testUrls;

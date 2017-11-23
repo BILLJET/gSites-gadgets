@@ -19,7 +19,7 @@
     list-style: none;
 /*    font-weight: bold;*/
     padding: 0;
-    margin: 10px 0;
+    margin: 0px 0;
     /*float: left;*/ /* Clear floats */
     width: 100%;
     /* Bring the nav above everything else--uncomment if needed.
@@ -98,13 +98,21 @@
     text-decoration: underline;
     background-color: transparent;
 }
-@media (max-width: 1028px) {
-    .nav { display: block;}
+.new-image {
+	height: 15px;
 }
-@media (max-width: 600px) {
+@media (max-width: 1080px) {
+    .nav { display: table;  width: 90%;}
+	#logo { float: left; width: 70px; }
+}
+@media (max-width: 720px) {
+    .nav { display: table;  width: 80%;}
     .nav a {
         font-size: 15px!important;
     }
+	.new-image {
+		height: 14px;
+	}
 }
 </style>
 </head>
@@ -116,12 +124,14 @@
 </div>
 <ul class="nav">
     <li>
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest">Dev Tools</a>
+	</li>
+    <li>
         <a href="#">Continuous Integration</a>
         <ul>
             <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Bitbucket">Bitbucket</a></li>
             <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Artifactory">Artifactory</a></li>
             <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Bamboo">Bamboo</a></li>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Sonar">Sonar</a></li>
         </ul>
     </li>
     <li>
@@ -130,6 +140,7 @@
             <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Confluence">Confluence</a></li>
             <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/HipChat">HipChat</a></li>
             <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/JIRA">JIRA</a></li>
+			<li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Webforms">Webforms</a></li>
         </ul>
     </li>
     <li>
@@ -145,16 +156,17 @@
         </ul-->
     </li>
     <li>
-        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/AMS">Monitoring <img src="https://sites.google.com/a/contractors.roche.com/devtoolstest/new-icon.png" style="height:15px"/></a>
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/AMS">Monitoring <img class="new-image" src="https://sites.google.com/a/contractors.roche.com/devtoolstest/new-icon.png"/></a>
         <!--ul>
             <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/AMS">AMS</a></li>
         </ul-->
     </li>
     <li>
-        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Checkmarks">Application Security</a>
-        <!--ul>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Checkmarks">Checkmarks</a></li>
-        </ul-->
+        <a href="#">Inspection/Security</a>
+        <ul>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Checkmarx">Checkmarx</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Sonar">Sonar</a></li>
+        </ul>
     </li>
 </ul>
 <script>

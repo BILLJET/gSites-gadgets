@@ -178,9 +178,12 @@
             document.links[i].className = 'active';
         }
     }
+	document.domain='google.com';
 	
 	//function testUrls()
 	//{
+		console.log(window.location);
+		console.log(window.parent.location);
 		if (/devtoolstest/.test(window.parent.location))
 		{
 			document.body.innerHTML = document.body.innerHTML.replace(/dev-tools/g,'devtoolstest');

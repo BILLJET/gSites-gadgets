@@ -179,14 +179,14 @@
         }
     }
 	
-	function testUrls()
-	{
+	//function testUrls()
+	//{
 		if (/devtoolstest/.test(window.parent.location))
 		{
 			document.body.innerHTML = document.body.innerHTML.replace(/dev-tools/g,'devtoolstest');
 		}
-	}
-	window.onload = testUrls;
+	//}
+	//window.onload = testUrls;
 </script>
 </body>
 </html>

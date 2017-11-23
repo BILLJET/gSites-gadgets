@@ -118,54 +118,54 @@
 </head>
 <body>
 <div id="logo">
-    <a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/">
-        <img src="https://sites.google.com/a/contractors.roche.com/devtoolstest/logo2.png"/>
+    <a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/">
+        <img src="https://sites.google.com/a/contractors.roche.com/dev-tools/logo2.png"/>
     </a>
 </div>
 <ul class="nav">
     <li>
-        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest">Dev Tools</a>
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/">Dev Tools</a>
 	</li>
     <li>
         <a href="#">Continuous Integration</a>
         <ul>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Bitbucket">Bitbucket</a></li>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Artifactory">Artifactory</a></li>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Bamboo">Bamboo</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Bitbucket">Bitbucket</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Artifactory">Artifactory</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Bamboo">Bamboo</a></li>
         </ul>
     </li>
     <li>
         <a href="#">Team Management</a>
         <ul>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Confluence">Confluence</a></li>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/HipChat">HipChat</a></li>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/JIRA">JIRA</a></li>
-			<li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Webforms">Webforms</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Confluence">Confluence</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/HipChat">HipChat</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/JIRA">JIRA</a></li>
+			<li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Webforms">Webforms</a></li>
         </ul>
     </li>
     <li>
-        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/CDS">Continuous Deployment</a>
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/CDS">Continuous Deployment</a>
         <!--ul>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/CDS">CDS</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/CDS">CDS</a></li>
         </ul-->
     </li>
     <li>
-        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/ELK">Log Management</a>
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/ELK">Log Management</a>
         <!--ul>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/ELK">ELK</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/ELK">ELK</a></li>
         </ul-->
     </li>
     <li>
-        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/AMS">Monitoring <img class="new-image" src="https://sites.google.com/a/contractors.roche.com/devtoolstest/new-icon.png"/></a>
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/AMS">Monitoring <img class="new-image" src="https://sites.google.com/a/contractors.roche.com/dev-tools/new-icon.png"/></a>
         <!--ul>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/AMS">AMS</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/AMS">AMS</a></li>
         </ul-->
     </li>
     <li>
         <a href="#">Inspection/Security</a>
         <ul>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Checkmarx">Checkmarx</a></li>
-            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/devtoolstest/Sonar">Sonar</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Checkmarx">Checkmarx</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Sonar">Sonar</a></li>
         </ul>
     </li>
 </ul>
@@ -178,6 +178,15 @@
             document.links[i].className = 'active';
         }
     }
+	
+	function testUrls()
+	{
+		if (/devtoolstest/.test(window.parent.location))
+		{
+			document.body.innerHTML = document.body.innerHTML.replace(/dev-tools/g,'devtoolstest');
+		}
+	}
+	window.onload = testUrls;
 </script>
 </body>
 </html>

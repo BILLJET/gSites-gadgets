@@ -101,6 +101,14 @@
 .new-image {
 	height: 15px;
 }
+@media (min-width: 1081px) {
+	.nav li:last-child {
+		position: relative;
+	}
+	.nav li:last-child ul {
+		left: -150px;
+	}
+}
 @media (max-width: 1080px) {
     .nav { display: table;  width: 90%;}
 	#logo { float: left; width: 70px; }
@@ -166,7 +174,7 @@
         <ul>
             <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Checkmarx">Checkmarx</a></li>
             <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Sonar">Sonar</a></li>
-			<li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/FishEye">FishEye</a></li>
+			<li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/FishEye">FishEye & Crucible</a></li>
         </ul>
     </li>
 </ul>

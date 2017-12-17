@@ -12,9 +12,8 @@
 <style type="text/css">
 .nav {
     list-style-type: none;
-    padding: 0;
-    margin: 0px 140px;    
-    width: 1000px;
+    padding: 0;     
+    width: 100%;
 	font-size:18px;
 	border-bottom: 1px solid #0066cc;
     
@@ -38,7 +37,7 @@ position: relative;*/
     border-left: 1px solid #0066cc;
     text-decoration: none;
 	color: #0066cc;
-	width: 182px;
+	width: 20%;
 	background:white;
 }
 .nav a:hover {

@@ -41,11 +41,11 @@ position: relative;*/
 	width: 182px;
 }
 .nav a:hover {
-    color: white!important;
-    background-color: #0066cc;
+    color: white !important;
+    background-color: #0066cc !important;
 }
 .nav a.active {
-    background: ##0066cc!important;
+    background: ##0066cc !important;
 	color:white !important;
 }
 

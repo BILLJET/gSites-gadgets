@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+    <ModulePrefs title="Menu" />
+    <Content type="html">
+     <![CDATA[ 
+<!doctype html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tabs</title>
+<style type="text/css">
+.nav {
+    list-style-type: none;
+    padding: 0;     
+    width: 100%;
+	font-size:18px;
+	border-bottom: 1px solid #0066cc;
+    
+}
+.nav > li {
+    float: left;
+      /*  margin-right: 10px;
+position: relative;*/
+width: 20%;
+}
+.nav {
+    display: flex;  
+    justify-content: center;
+}
+.nav a {
+    display: block;
+    padding: 6px 8px 4px 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-top: 1px solid #0066cc;
+    border-right: 1px solid #0066cc;
+    border-left: 1px solid #0066cc;
+    text-decoration: none;
+	color: #0066cc;
+	
+	background:white;
+}
+.nav a:hover {
+    color: white !important;
+    background-color: #0066cc !important;
+}
+/*.nav a.active {
+    background: #0066cc !important;
+	color:white !important;
+}*/
+
+.inactive > a{
+	background: white;
+	color: #0066cc;
+}
+
+.current > a{
+     background:#0066cc;
+	 color:white;
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+<ul id="level1" class="nav category">	
+	
+    <li class="level1 inactive" id="main">
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/testjan/">Organization</a>
+	</li>
+    <li class="level1 inactive">
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/testjan/test2">SolutionLifecycle</a>        
+    </li>
+    <li class="level1 inactive">
+        <a target="_top" href="#">Training</a>       
+    </li>
+    <li class="level1 inactive">
+        <a target="_top" href="#">Resources</a>
+    </li> 
+	<li class="level1 inactive">
+        <a target="_top" href="#">Contacts</a>
+    </li> 	
+</ul>
+	
+	
+	
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script>
+	//function testUrls()
+	//{
+	//	console.log(window.location);
+	//	console.log(window.parent.location);
+	//	console.log(document.referrer);
+	//	if (/test-jan/.test(document.referrer))
+	//	{
+	//		document.body.innerHTML = document.body.innerHTML.replace(/testjan/,'test-jan');
+	//	}
+		
+	//	var url = (window.location != window.parent.location)
+	//				? document.referrer
+	//				: document.location.href;
+	//	for (var i = 0; i < document.links.length; i++) {
+	//		if (document.links[i].href == url) {
+	//			document.links[i].className = 'active';
+	//		}
+	//	}
+	//}
+	//window.onload = testUrls;
+	
+	
+	
+	var $j = jQuery.noConflict();
+	$j(function() {
+		var index = localStorage.getItem("liIndex2");
+		$j('li.level1').click(function() {
+			localStorage.setItem("liIndex2", $j(this).index());
+			var url = window.location.href;
+			console.log("Link "+url);
+			if(url == "https://sites.google.com/a/contractors.roche.com/testjan/")
+			{
+				$j("li.level1").addClass('inactive').removeClass("current");
+				$j('.main').addClass('current').removeClass('inactive');
+			}
+			$j("li.level1").addClass('inactive').removeClass("current");
+			$j(this).addClass('current').removeClass('inactive');
+			//$j('ul#level2').hide();
+			//$j('ul#level2', this).show();
+		});
+		if (index)
+			$j("li.level1").eq(index).trigger('click');
+	});
+	window.onload = j;
+</script>
+</body>
+</html>
+]]>
+    </Content> 
+</Module>

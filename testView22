@@ -123,7 +123,7 @@ width: 20%;
 			if(url == "https://sites.google.com/a/contractors.roche.com/testjan/")
 			{
 				$j("li.level1").addClass('inactive').removeClass("current");
-				$j('.main').addClass('current').removeClass('inactive');
+				$j('#main').addClass('current').removeClass('inactive');
 			}
 			$j("li.level1").addClass('inactive').removeClass("current");
 			$j(this).addClass('current').removeClass('inactive');

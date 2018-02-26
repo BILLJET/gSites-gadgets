@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>People Announcements</title>
+    <?!= include("style.css"); ?>
+</head>
+
+<body style="font-family: arial;">
+    <div class="field" style="padding:10px 0 15px 0;border-bottom:solid 1px #e5e5e5;float:left;width:97%;margin:0 20px;">
+        <div>
+            <span style="font-size:17px;color:black;font-weight:bold;text-decoration:none;">Click below for detailed announcement texts</span>
+            <span style="font-weight:bold;float:right;">Announcement Date</span>
+        </div>
+    </div>
+    <div id="tabs-main" class="container mainContentPanel">
+        <div class="content" id="showPost">
+        </div>
+    </div>
+    <?!= include("jQuery_3.2.1.js"); ?>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+
+</html>
+<script>
+    var records = [];
+    function displayAllRecords() {
+        getAllRecordsFromSpreadSheet();
+        records.reverse();
+        console.log('records.length' + records.length);
+        for (var i = 0; i < records.length; i++) {
+            $("#showPost").append(createHTMLForRecord(records[i]));
+        };
+    }
+
+    function displayData() {
+        displayAllRecords();
+    }
+
+    function getAllRecordsFromSpreadSheet() {
+ <? var recordsFromSheet = getAllRecordsFromSheet(); ?>
+  <? for (var i = 0; i < recordsFromSheet.length; i++) {  ?>
+            records.push([
+       <?= recordsFromSheet[i].link; ?>,
+       <?= recordsFromSheet[i].title; ?> ,
+       <?= recordsFromSheet[i].date; ?>,
+     ]);
+  <? } ?>
+}
+
+    function createHTMLForRecord(record) {
+        var d = new Date(record[2]);
+        var date = getCurrentTime(d);
+
+        var html =
+            '<div class="field" style="padding:25px 0;border-bottom:solid 1px #e5e5e5;float:left;width:100%;"><div><a href="' + record[0] + '" target="_blank" style="font-size:15px;color:#0066cc;font-weight:bold;cursor:pointer;text-decoration:none;">' + record[1] + '</a><span style="font-weight:bold;float:right;font-size:15px;">' + date + '</span></div></div>'
+        return html;
+    }
+
+    $(document).ready(function () {
+        displayData();
+    });
+
+    function getCurrentTime(date) {
+        var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ];
+        var d = date,
+            dformat = d.getDate() + '-' +
+                [monthNames[d.getMonth()] + '-' +
+                    d.getFullYear()];
+        return dformat;
+    }; 
+</script>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Notification</title>
+    <?!= include("style.css"); ?>
+</head>
+
+<body style="width:1162px;margin:0px;">
+    <div id="tabs">
+        <ul class="tabsMenu">
+            <li>
+                <a href="#tabs-1" class="tabsLink active">Blank</a>
+            </li>
+            <li>
+                <a href="#tabs-2" class="tabsLink">Declaration</a>
+            </li>
+            <li>
+                <a href="#tabs-3" class="tabsLink">Update</a>
+            </li>
+            <li>
+                <a href="#tabs-4" class="tabsLink">Resolved</a>
+            </li>
+        </ul>
+
+
+        <div id="tabs-1">
+            <div class="container mainContentPanel">
+                <div style="float:right;height:100%;width:478px;">
+                    <span class="template">
+                        <a href="https://drive.google.com/file/d/19gBtVdYXufNYI1y1f9ij1WIaGjgCw90l/view?usp=sharing" target="_blank" style="text-decoration:none;font-weight:bold;font-size:14px;padding: 2px 10px;">View full template</a>
+                    </span>
+                    <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                        <span style="width:135px;padding-top:24px;float:left;color:#0066cc;font-size:17px;font-weight:bold;margin-left:10px;">E-mail Template</span>
+                    </div>
+                    <img src="https://sites.google.com/a/roche.com/diaitsupport/blankTemplate.png" style="width:482px;margin-top:22px;">
+                </div>
+                <div style="padding:0 5px 0 10px;font-size:16px;width:638px;">
+                    <div>
+                        <span style="font-size:20px;color:#0066cc;font-weight:bold;">Blank</span>
+                    </div>
+                    <form onSubmit="return createMailDefault();" style="height:507px;border-right:2px solid #0066cc;margin-right:-6px;">
+                        <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                            <span style="width:90px;padding-top:2px;float:left;color:#0066cc;font-size:17px;font-weight:bold;margin-left:0px;">Portal Post</span>
+                            <span style="width:280px;padding-top:4px;float:left;color:#0066cc;font-size:13px;font-weight:bold;margin-left:3px;font-style:italic;">(complete based on suggestions in red)</span>
+                        </div>
+                        <div style="margin:50px 0 10px 0;padding-bottom:10px;">
+                            <span style="width:62px;padding-top:2px;float:left;color:#0066cc;">Subject:</span>
+                            <input type="text" name="blankSubject" style="width:570px;" required>
+                        </div>
+                        <div style="border-bottom:1px solid rgb(169, 169, 169);margin-bottom:10px;width:96%;margin-left:2%;"></div>
+                        <div>
+                            <span style="width:50px;padding-top:2px;float:left;">ID: IM</span>
+                            <input type="text" name="blankNr" style="width:70px;" required>
+                        </div>
+                        <div>
+                            <p>Dear All</p>
+                        </div>
+                        <div>
+                            <textarea style="width:630px;height:200px;resize:none;" name="blankMessage" placeholder="Write message" required></textarea>
+                        </div>
+                        <div style="margin:10px 0;">
+                            <span>Kind Regards</span>
+                        </div>
+                        <div>
+                            <input type="text" name="blankFirstName" placeholder="First Name" style="width:120px;margin-right:5px;" required>
+                            <input type="text" name="blankLastName" placeholder="Last Name" style="width:120px;" required>
+                        </div>
+                        <div style="margin:10px 20px 0px 0;">
+                            <input type="submit" value="Send message" name="blankButton" style="float:left;width:140px;height:30px;border:1px solid #0066cc;background:#0066cc;color:white;border-radius:5px;cursor:pointer;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="tabs-2">
+            <div class="container mainContentPanel">
+                <div style="float:right;height:100%;width:478px;">
+                    <span class="template">
+                        <a href="https://drive.google.com/file/d/1Pm1knh_eweAHsJIevjDBzBTb_p9qPXM6/view?usp=sharing" target="_blank" style="text-decoration:none;font-weight:bold;font-size:14px;padding: 2px 10px;">View full template</a>
+                    </span>
+                    <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                        <span style="width:135px;padding-top:24px;float:left;color:#0066cc;font-size:17px;font-weight:bold;margin-left:10px;">E-mail Template</span>
+                    </div>
+                    <img src="https://sites.google.com/a/roche.com/diaitsupport/declarationTemplate.png" style="width:482px;margin-top:21px;">
+                </div>
+                <div style="padding:0 5px 0 10px;font-size:16px;width:638px;">
+                    <div>
+                        <span style="font-size:20px;color:#0066cc;font-weight:bold;">Declaration</span>
+                    </div>
+                    <form onSubmit="createMailDeclaration()" style="height:832px;border-right:2px solid #0066cc;margin-right:-6px;">
+                        <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                            <span style="width:90px;padding-top:2px;float:left;color:#0066cc;font-size:17px;font-weight:bold;margin-left:0px;">Portal Post</span>
+                            <span style="width:280px;padding-top:4px;float:left;color:#0066cc;font-size:13px;font-weight:bold;margin-left:3px;font-style:italic;">(complete based on suggestions in red)</span>
+                        </div>
+                        <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                            <span style="width:62px;padding-top:2px;float:left;color:#0066cc;">Subject:</span>
+                        </div>
+                        <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                            <input type="text" value="[DECLARATION] DIA IT MAJOR INCIDENT - " style="width:270px;color:#0066cc;" disabled>
+                            <input type="text" name="declarSubject" placeholder="[SYSTEM NAME] SEVERLY AFFECTED / NOT AVAILABLE" style="width:358px;margin-left:-5px;"
+                                required>
+                        </div>
+                        <div style="border-bottom:1px solid rgb(169, 169, 169);margin-bottom:10px;width:96%;margin-left:2%;"></div>
+                        <div>
+                            <span style="width:50px;padding-top:2px;float:left;">ID: IM</span>
+                            <input type="text" name="declarNr" style="width:70px;" required>
+                        </div>
+                        <div>
+                            <p>Dear All</p>
+                        </div>
+                        <div>
+                        </div>
+                        <div style="margin-top:13px;">
+                            <textarea style="width:630px;height:150px;resize:none;" name="declarMessage" placeholder="Write message" required></textarea>
+                        </div>
+                        <div style="margin:13px 0;">
+                            <span>Our teams are working with highest priority on the resolution of this incident.</span>
+                        </div>
+                        <div>
+                            <div style="margin-bottom:13px;">
+                                <div style="font-weight:bold;">
+                                    <span>Incident Log Time</span>
+                                </div>
+                                <div>
+                                    <input class="result" type="text" name="declarIncidentTime" placeholder="[dd MMM yyyy] [hh:mm] [a.m./p.m.] [time zone]" style="width:330px;"
+                                        required>
+                                </div>
+                            </div>
+                            <div style="margin-bottom:13px;">
+                                <div style="font-weight:bold;">
+                                    <span>Major Incident Declaration Time</span>
+                                </div>
+                                <div>
+                                    <input class="result" type="text" name="declarTime" placeholder="[dd MMM yyyy] [hh:mm] [a.m./p.m.] [time zone]" style="width:330px;"
+                                        required>
+                                </div>
+                            </div>
+                            <div style="margin-bottom:13px;">
+                                <div style="font-weight:bold;">
+                                    <span>Current Estimated Resolution Time</span>
+                                </div>
+                                <div>
+                                    <input class="result" type="text" name="declarEstimate" placeholder="[dd MMM yyyy] [hh:mm] [a.m./p.m.] [time zone]" style="width:330px;"
+                                        required>
+                                </div>
+                            </div>
+                            <div style="margin-bottom:13px;">
+                                <div style="font-weight:bold;">
+                                    <span>Updates from now on</span>
+                                </div>
+                                <div style="margin-top:13px;">
+                                    <textarea style="width:630px;height:70px;resize:none;" name="declarUpdates" placeholder="Two-hourly via e-mail and diaitsupport.roche.com."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span>Please receive our sincere apologies for the inconvenience caused.</span>
+                        </div>
+                        <div style="margin:10px 0;">
+                            <span>Kind Regards</span>
+                        </div>
+                        <div>
+                            <input type="text" name="declarFirstName" placeholder="First Name" style="width:120px;margin-right:5px;" required>
+                            <input type="text" name="declarLastName" placeholder="Last Name" style="width:120px;" required>
+                        </div>
+                        <div style="margin-top:10px;">
+                            <input type="text" name="declarMajorIncident" value="Major Incident Manager" style="width:253px;">
+                        </div>
+                        <div style="margin:10px 20px 0px 0;">
+                            <input type="submit" value="Send message" style="float:left;width:140px;height:30px;border:1px solid #0066cc;background:#0066cc;color:white;border-radius:5px;cursor:pointer;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="tabs-3">
+            <div class="container mainContentPanel">
+                <div style="float:right;height:100%;width:478px;">
+                    <span class="template">
+                        <a href="https://drive.google.com/file/d/1WcfrCaejcPews4kkxfsjb-S86DlLrh1r/view?usp=sharing" target="_blank" style="text-decoration:none;font-weight:bold;font-size:14px;padding: 2px 10px;">View full template</a>
+                    </span>
+                    <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                        <span style="width:135px;padding-top:24px;float:left;color:#0066cc;font-size:17px;font-weight:bold;margin-left:10px;">E-mail Template</span>
+                    </div>
+                    <img src="https://sites.google.com/a/roche.com/diaitsupport/updateTemplate.png" style="width:482px;margin-top:21px;">
+                </div>
+                <div style="padding:0 5px 0 10px;font-size:16px;width:638px;">
+                    <div>
+                        <span style="font-size:20px;color:#0066cc;font-weight:bold;">Update</span>
+                    </div>
+                    <form onSubmit="createMailUpdate()" style="height:926px;border-right:2px solid #0066cc;margin-right:-6px;">
+                        <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                            <span style="width:90px;padding-top:2px;float:left;color:#0066cc;font-size:17px;font-weight:bold;margin-left:0px;">Portal Post</span>
+                            <span style="width:280px;padding-top:4px;float:left;color:#0066cc;font-size:13px;font-weight:bold;margin-left:3px;font-style:italic;">(complete based on suggestions in red)</span>
+                        </div>
+                        <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                            <span style="width:62px;padding-top:2px;float:left;color:#0066cc;">Subject:</span>
+                        </div>
+                        <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                            <input type="text" value="[UPDATE" style="width:58px;color:#0066cc;" disabled>
+                            <input type="text" name="updateID" style="width:28px;margin-left:-5px;" placeholder="[no.]" required>
+                            <input type="text" value="]DIA IT MAJOR INCIDENT– " style="width:169px;margin-left:-6px;color:#0066cc;" disabled>
+                            <input type="text" name="updateSubject" placeholder="[SYSTEM NAME] SEVERLY AFFECTED / NOT AVAILABLE" style="width:369px;margin-left:-6px;"
+                                required>
+                        </div>
+                        <div style="border-bottom:1px solid rgb(169, 169, 169);margin-bottom:10px;width:96%;margin-left:2%;"></div>
+                        <div>
+                            <span style="width:50px;padding-top:2px;float:left;">ID: IM</span>
+                            <input type="text" name="updateNr" style="width:70px;" required>
+                        </div>
+                        <div>
+                            <p>Dear All</p>
+                        </div>
+                        <div>
+                            <textarea style="width:630px;height:245px;resize:none;" name="updateSystem" placeholder="Write message" required></textarea>
+                        </div>
+                        <div style="margin:13px 0;">
+                            <span>Our teams continue with highest priority on the resolution of this incident.</span>
+                        </div>
+                        <div>
+                            <div style="margin-bottom:13px;">
+                                <div style="font-weight:bold;">
+                                    <span>Incident Log Time</span>
+                                </div>
+                                <div>
+                                    <input class="result" type="text" name="updateIncidentTime" placeholder="[dd MMM yyyy] [hh:mm] [a.m./p.m.] [time zone]" style="width:330px;"
+                                        required>
+                                </div>
+                            </div>
+                            <div style="margin-bottom:13px;">
+                                <div style="font-weight:bold;">
+                                    <span>Major Incident Declaration Time</span>
+                                </div>
+                                <div>
+                                    <input class="result" type="text" name="updateTime" placeholder="[dd MMM yyyy] [hh:mm] [a.m./p.m.] [time zone]" style="width:330px;"
+                                        required>
+                                </div>
+                            </div>
+                            <div style="margin-bottom:13px;">
+                                <div style="font-weight:bold;">
+                                    <span>Current Estimated Resolution Time</span>
+                                </div>
+                                <div>
+                                    <input class="result" type="text" name="updateEstimate" placeholder="[dd MMM yyyy] [hh:mm] [a.m./p.m.] [time zone]" style="width:330px;"
+                                        required>
+                                </div>
+                            </div>
+                            <div style="margin-bottom:13px;">
+                                <div style="font-weight:bold;">
+                                    <span>Updates from now on</span>
+                                </div>
+                                <div style="margin-top:13px;">
+                                    <textarea style="width:630px;height:70px;resize:none;" name="updateUpdates" placeholder="Two-hourly via e-mail and diaitsupport.roche.com."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span>Please receive our sincere apologies for the inconvenience caused.</span>
+                        </div>
+                        <div style="margin:10px 0;">
+                            <span>Kind Regards</span>
+                        </div>
+                        <div>
+                            <input type="text" name="updateFirstName" placeholder="First Name" style="width:120px;margin-right:5px;" required>
+                            <input type="text" name="updateLastName" placeholder="Last Name" style="width:120px;" required>
+                        </div>
+                        <div style="margin-top:10px;">
+                            <input type="text" name="updateMajorIncident" value="Major Incident Manager" style="width:253px;">
+                        </div>
+                        <div style="margin:10px 20px 0px 0;">
+                            <input type="submit" value="Send message" style="float:left;width:140px;height:30px;border:1px solid #0066cc;background:#0066cc;color:white;border-radius:5px;cursor:pointer;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="tabs-4">
+            <div class="container mainContentPanel" style="height:735px;">
+                <div style="float:right;height:100%;width:478px;">
+                    <span class="template">
+                        <a href="https://drive.google.com/file/d/1NbyeEulY3RdFCyOozowquZXkHchPlBvS/view?usp=sharing" target="_blank" style="text-decoration:none;font-weight:bold;font-size:14px;padding: 2px 10px;">View full template</a>
+                    </span>
+                    <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                        <span style="width:135px;padding-top:24px;float:left;color:#0066cc;font-size:17px;font-weight:bold;margin-left:10px;">E-mail Template</span>
+                    </div>
+                    <img src="https://sites.google.com/a/roche.com/diaitsupport/resolvedTemplate.png" style="width:482px;margin-top:21px;">
+                </div>
+                <div style="padding:0 5px 0 10px;font-size:16px;width:638px;">
+                    <div>
+                        <span style="font-size:20px;color:#0066cc;font-weight:bold;">Resolved</span>
+                    </div>
+                    <form onSubmit="createMailResolve();" style="height:692px;border-right:2px solid #0066cc;margin-right:-6px;">
+                        <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                            <span style="width:90px;padding-top:2px;float:left;color:#0066cc;font-size:17px;font-weight:bold;margin-left:0px;">Portal Post</span>
+                            <span style="width:280px;padding-top:4px;float:left;color:#0066cc;font-size:13px;font-weight:bold;margin-left:3px;font-style:italic;">(complete based on suggestions in red)</span>
+                        </div>
+                        <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                            <span style="width:62px;padding-top:2px;float:left;color:#0066cc;">Subject:</span>
+                        </div>
+                        <div style="margin:20px 0 10px 0;padding-bottom:10px;">
+                            <input type="text" value="[RESOLVED] DIA IT MAJOR INCIDENT– " style="width:248px;color:#0066cc;" disabled>
+                            <input type="text" name="resolveSubject" style="width:381px;margin-left:-5px;" placeholder="[SYSTEM NAME] FULLY AVAILABLE AGAIN"
+                                required>
+                        </div>
+                        <div style="border-bottom:1px solid rgb(169, 169, 169);margin-bottom:10px;width:96%;margin-left:2%;"></div>
+                        <div>
+                            <span style="width:50px;padding-top:2px;float:left;">ID: IM</span>
+                            <input type="text" name="resolveNr" style="width:70px;" required>
+                        </div>
+                        <div>
+                            <p>Dear All</p>
+                        </div>
+                        <div>
+                            <textarea name="resolveSystem" style="height:50px;resize:none;width:630px;" placeholder="Write message" required></textarea>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <div style="margin-bottom:13px;">
+                                <div style="font-weight:bold;">
+                                    <span>Incident Log Time</span>
+                                </div>
+                                <div>
+                                    <input class="result" type="text" name="resolveIncidentTime" placeholder="[dd MMM yyyy] [hh:mm] [a.m./p.m.] [time zone]"
+                                        style="width:330px;" required>
+                                </div>
+                            </div>
+                            <div style="margin-bottom:13px;">
+                                <div style="font-weight:bold;">
+                                    <span>Major Incident Declaration Time</span>
+                                </div>
+                                <div>
+                                    <input class="result" type="text" name="resolveTime" placeholder="[dd MMM yyyy] [hh:mm] [a.m./p.m.] [time zone]" style="width:330px;"
+                                        required>
+                                </div>
+                            </div>
+                            <div style="margin-bottom:13px;">
+                                <div style="font-weight:bold;">
+                                    <span>Major Incident Resolution Time</span>
+                                </div>
+                                <div>
+                                    <input class="result" type="text" name="resolveResolution" placeholder="[dd MMM yyyy] [hh:mm] [a.m./p.m.] [time zone]" style="width:330px;"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top:18px;">
+                            <textarea name="resolveOurTeam" style="height:60px;resize:none;width:630px;" placeholder="Our teams continue to monitor the system carefully and will take required measures to prevent similar incidents in the future."></textarea>
+                        </div>
+                        <div style="margin-top:15px;">
+                            <span>Thank you very much for your support and once again apologies for the inconvenience caused.</span>
+                        </div>
+                        <div style="margin:10px 0;">
+                            <span>Kind Regards</span>
+                        </div>
+                        <div>
+                            <input type="text" name="resolveFirstName" placeholder="First Name" style="width:120px;margin-right:5px;" required>
+                            <input type="text" name="resolveLastName" placeholder="Last Name" style="width:120px;" required>
+                        </div>
+                        <div style="margin-top:10px;">
+                            <input type="text" name="resolveMajorIncident" value="Major Incident Manager" style="width:253px;">
+                        </div>
+                        <div style="margin:10px 20px 0px 0;">
+                            <input type="submit" value="Send message" name="resolveButton" style="float:left;width:140px;height:30px;border:1px solid #0066cc;background:#0066cc;color:white;border-radius:5px;cursor:pointer;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?!= include("jQuery_3.2.1.js"); ?>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+
+</html>
+
+<script>
+    function createMailDefault() {
+        var blank_subject = $("[name=blankSubject]").val();
+        var blank_id = $("[name=blankNr]").val();
+        var blank_message = $("[name=blankMessage]").val();
+        var blank_fname = $("[name=blankFirstName]").val();
+        var blank_lname = $("[name=blankLastName]").val();
+
+        google.script.run.blankListSendEmails(blank_subject, blank_id, blank_message, blank_fname, blank_lname);
+        redirect();
+    }
+
+    function createMailDeclaration() {
+        var declar_subject = $("[name=declarSubject]").val();
+        var declar_id = $("[name=declarNr]").val();
+        var declar_message = $("[name=declarMessage]").val();
+        var declar_ILT = $("[name=declarIncidentTime]").val();
+        var declar_MIDT = $("[name=declarTime]").val();
+        var declar_CERT = $("[name=declarEstimate]").val();
+        var declar_Update_from_now = $("[name=declarUpdates]").val();
+        var declar_fname = $("[name=declarFirstName]").val();
+        var declar_lname = $("[name=declarLastName]").val();
+        var declar_manager = $("[name=declarMajorIncident]").val();
+
+        google.script.run.declarListSendEmails(declar_subject, declar_id, declar_message, declar_ILT, declar_MIDT, declar_CERT, declar_Update_from_now, declar_fname, declar_lname, declar_manager);
+        redirect();
+    }
+
+    function createMailUpdate() {
+        var update_Subject = $("[name=updateSubject]").val();
+        var update_ID = $("[name=updateID]").val();
+        var update_Nr = $("[name=updateNr]").val();
+        var update_System = $("[name=updateSystem]").val();
+        var update_Date = $("[name=updateDate]").val();
+        var update_IncidentTime = $("[name=updateIncidentTime]").val();
+        var update_Time = $("[name=updateTime]").val();
+        var update_Estimate = $("[name=updateEstimate]").val();
+        var update_Updates = $("[name=updateUpdates]").val();
+        var update_FirstName = $("[name=updateFirstName]").val();
+        var update_LastName = $("[name=updateLastName]").val();
+        var update_MajorIncident = $("[name=updateMajorIncident]").val();
+
+        google.script.run.updateListSendEmails(update_Subject, update_ID, update_Nr, update_System, update_Date, update_IncidentTime, update_Time, update_Estimate, update_Updates, update_FirstName, update_LastName, update_MajorIncident);
+        redirect();
+    }
+
+    function createMailResolve() {
+        var resolve_Subject = $("[name=resolveSubject]").val();
+        var resolve_Nr = $("[name=resolveNr]").val();
+        var resolve_System = $("[name=resolveSystem]").val();
+        var resolve_IncidentTime = $("[name=resolveIncidentTime]").val();
+        var resolve_Time = $("[name=resolveTime]").val();
+        var resolve_Resolution = $("[name=resolveResolution]").val();
+        var resolve_OurTeam = $("[name=resolveOurTeam]").val();
+        var resolve_FirstName = $("[name=resolveFirstName]").val();
+        var resolve_LastName = $("[name=resolveLastName]").val();
+        var resolve_MajorIncident = $("[name=resolveMajorIncident]").val();
+
+        google.script.run.resolveListSendEmails(resolve_Subject, resolve_Nr, resolve_System, resolve_IncidentTime, resolve_Time, resolve_Resolution, resolve_OurTeam, resolve_FirstName, resolve_LastName, resolve_MajorIncident);
+        redirect();
+    }
+
+    function redirect() {
+        window.open('https://sites.google.com/a/roche.com/diaitsupport/savedposts', '_top')
+    }
+
+    $(function () {
+        $("#tabs").tabs();
+        getCurrentTime();
+    });
+
+    $('#tabs .tabsMenu li .tabsLink').click(function () {
+        $('#tabs .tabsMenu li .tabsLink').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    Number.prototype.padLeft = function (base, chr) {
+        var len = (String(base || 10).length - String(this).length) + 1;
+        return len > 0 ? new Array(len).join(chr || '0') + this : this;
+    }
+
+    function getCurrentTime() {
+        var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ];
+        var d = new Date,
+            dformat = d.getDate() + ' ' +
+                [monthNames[d.getMonth()] + ' ' +
+                    d.getFullYear()] +
+                ' ' +
+                [d.getHours().padLeft(),
+                d.getMinutes().padLeft()].join(':') +
+                ' CET' +
+                d.getTimezoneOffset() / 60 +
+                ':00';
+
+        $('.result').val(dformat);
+    };
+</script>

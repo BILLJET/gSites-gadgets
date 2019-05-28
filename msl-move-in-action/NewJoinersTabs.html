@@ -1,1 +1,112 @@
-<div></div>
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="example" />
+  <UserPref name="myname" display_name="URL" required="true" />
+  <Content type="html">
+     <![CDATA[ 
+      <!doctype html>
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style type="text/css">
+  *{
+    font-family: Imago !important;
+  }
+</style>
+    
+  </head>
+
+<body onload="onPageLoaded()">
+      
+    <!-- <div class="menu">
+    
+        <div class="menu-tab" id="news-tab">
+          <a href="https://sites.google.com/a/roche.com/move-in-action/news" target="_top">NEWS</a>
+        </div>
+        
+        <div class="menu-tab" id="new-joiners-tab">
+          <a href="https://sites.google.com/a/roche.com/move-in-action/new-joiners" target="_top">NEW JOINERS</a>
+        </div>
+        
+        <div class="menu-tab" id="pre-field-tab">
+          <a href="https://sites.google.com/a/roche.com/move-in-action/msls-pre-field" target="_top">MSLS</a>
+        </div>
+    
+        <div class="menu-tab" id="in-field-tab">
+          <a href="https://sites.google.com/a/roche.com/move-in-action/managers" target="_top">MANAGERS</a>
+        </div>
+        
+        <div class="menu-tab" id="impact-tab">
+          <a href="https://sites.google.com/a/roche.com/move-in-action/impact" target="_top">IMPACT</a>     
+        </div>
+        
+        <div class="menu-tab" id="universe-tab">
+          <a href="https://sites.google.com/a/roche.com/move-in-action/universe" target="_top">UNIVERSE</a>
+        </div>
+        
+        <div class="menu-tab" id="team-tab">
+          <a href="https://sites.google.com/a/roche.com/move-in-action/global-team" target="_top">GLOBAL TEAM</a>
+        </div>
+        
+        <div class="menu-tab" id="home-tab">
+          <a>
+            <div class="logo-container">
+              <img src="https://sites.google.com/a/roche.com/move-in-action/news/logo_blue_bg.png" alt="logo" />
+            </div>
+          </a>
+        </div>
+    
+    </div> -->
+    <div id="tabs">
+        <ul class="tabsMenu">
+            <li>
+                <a href="#tabs-1" class="tabsLink active">Blank</a>
+            </li>
+            <li>
+                <a href="#tabs-2" class="tabsLink">Declaration</a>
+            </li>
+            <li>
+                <a href="#tabs-3" class="tabsLink">Update</a>
+            </li>
+            <li>
+                <a href="#tabs-4" class="tabsLink">Resolved</a>
+            </li>
+        </ul>
+    <div id="tabs-1" style="height: 300px;display: block;width: 500px;background: green;">1111111</div>
+    <div id="tabs-2" style="height: 900px;display: block;width: 500px;background: blue;">2222222</div>
+    <div id="tabs-3" style="height: 500px;display: block;width: 500px;background: green;">3333333</div>
+    <div id="tabs-4" style="height: 200px;display: block;width: 500px;background: blue;">4444444</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+</html>
+
+<script>
+
+function onPageLoaded() {
+               gadgets.window.adjustHeight();
+                }
+
+
+
+
+  $(function () {
+        $("#tabs").tabs();
+        getCurrentTime();
+    });
+
+    $('#tabs .tabsMenu li .tabsLink').click(function () {
+        $('#tabs .tabsMenu li .tabsLink').removeClass('active');
+        $(this).addClass('active');
+    });
+</script>
+
+
+
+     ]]>
+  </Content> 
+</Module>

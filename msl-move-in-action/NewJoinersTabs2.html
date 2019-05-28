@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-  <ModulePrefs title="example" />
+  <ModulePrefs title="example" width="780" height="400" author = "Nirmal" />
+  <Require feature="dynamic-height"/>
   <UserPref name="myname" display_name="URL" required="true" />
   <Content type="html">
      <![CDATA[ 
@@ -19,7 +20,7 @@
     
   </head>
 
-<body onload="onPageLoaded()">
+<body>
       
     <!-- <div class="menu">
     
@@ -85,19 +86,15 @@
 </body>
 <script>
 
-function onPageLoaded() {
-               gadgets.window.adjustHeight();
-                }
-
   $(function () {
         $("#tabs").tabs();
-        getCurrentTime();
+        gadgets.window.adjustHeight();
     });
 
-    $('#tabs .tabsMenu li .tabsLink').click(function () {
-        $('#tabs .tabsMenu li .tabsLink').removeClass('active');
-        $(this).addClass('active');
-    });
+    //$('#tabs .tabsMenu li .tabsLink').click(function () {
+    //    $('#tabs .tabsMenu li .tabsLink').removeClass('active');
+    //    $(this).addClass('active');
+    //});
 </script>
 </html>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-  <ModulePrefs title="example" width="780" height="400" author = "Nirmal" />
+  <ModulePrefs title="example" width="780" height="400" author = "Nirmal">
   <Require feature="dynamic-height"/>
   </ModulePrefs>
   <Content type="html">

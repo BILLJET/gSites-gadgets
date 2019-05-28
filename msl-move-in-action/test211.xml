@@ -2,7 +2,7 @@
 <Module>
   <ModulePrefs title="example" width="780" height="400" author = "Nirmal" />
   <Require feature="dynamic-height"/>
-  <UserPref name="myname" display_name="URL" required="true" />
+  </ModulePrefs>
   <Content type="html">
      <![CDATA[ 
       <!doctype html>
@@ -85,13 +85,13 @@
         $("#tabs").tabs();
         gadgets.window.adjustHeight();
     });
-    //$('#tabs .tabsMenu li .tabsLink').click(function () {
+    $('#tabs .tabsMenu li .tabsLink').click(function () {
           
-    //    $('#tabs .tabsMenu li .tabsLink').removeClass('active');
-    //    $(this).addClass('active');
+        $('#tabs .tabsMenu li .tabsLink').removeClass('active');
+        $(this).addClass('active');
           
           gadgets.window.adjustHeight();
-    //});
+    });
 </script>
 </html>
      ]]>

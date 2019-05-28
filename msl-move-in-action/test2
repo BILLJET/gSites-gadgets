@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="" width="780" height="400" author = "Nirmal"  author_email="test@gmail.com">
+  <Require feature="dynamic-height"/>
+</ModulePrefs>
+
+<Content type="html" view="home"><![CDATA[
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAbsKUuaQkDlFS5MuhGL6BFhQ-aAVxWC056AEHluvXi7tNMTGv8hTpA_1ngbayPyaiRww7ZFnWC7n2fw"/></script>
+<script type="text/javascript">
+google.load("jquery", "1.4.2");
+ _IG_RegisterOnloadHandler(function() {
+         // Put Jquery here
+        $(document).ready(function(){
+         $('.test').children().remove();
+         var url = "http://www.yahoo.com";
+            _IG_FetchContent(url, func,  { refreshInterval: 0 });  
+                  function func(obj){
+                       $('.test').append(obj);
+                       adjustHeight();
+                  }
+        });
+ 
+});
+function adjustHeight(){
+    gadgets.window.adjustHeight();
+}
+</script>
+<div class='test'></div>
+]]></Content>
+</Module>

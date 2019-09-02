@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+    <ModulePrefs title="Menu" />
+    <Content type="html">
+     <![CDATA[ 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Top Menu</title>
+<style type="text/css">
+#logo{
+    text-align: left;
+    /*margin: 15px 30px;*/
+    padding: 0;
+    margin: 0;
+}
+.nav {
+    list-style: none;
+/*    font-weight: bold;*/
+    padding: 0;
+    margin: 0px 0;
+    /*float: left;*/ /* Clear floats */
+    width: 100%;
+    /* Bring the nav above everything else--uncomment if needed.
+    position: relative;
+    z-index: 5;
+    */
+}
+.nav > li {
+    float: left;
+    margin-right: 10px;
+    /*position: relative;*/
+}
+.nav {
+    display: flex;  
+    justify-content: center;
+}
+.nav a {
+    display: block;
+    padding: 5px;
+    /*background-color: #333;*/
+    color: #999999!important;
+    font-family: 'Droid Sans',sans-serif!important;
+    font-size: 16px!important;
+    text-decoration: none;
+}
+.nav a:hover {
+    color: #444444!important;
+    text-decoration: underline;
+    background-color: transparent;
+}
+.nav a.active {
+    color: #31558e!important;
+}
+/*--- DROPDOWN ---*/
+.nav ul {
+    /*background-color: #ff0;*//* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+    /*background: rgba(255,255,255,0);*/ /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+    background-color: #fff;
+    color: #999999!important;
+    font-family: 'Droid Sans',sans-serif!important;
+    font-size: 16px!important;
+    text-decoration: none;
+    list-style: none;
+    position: absolute;
+    display: none;
+    /*left: -9999px; /* Hide off-screen when not needed (this is more accessible than display: none;) */
+    padding-left: 0;
+}
+.nav ul li {
+    padding-top: 1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+    float: left;
+    /*position: absolute;*/
+    border-right: solid 1px #999;
+}
+.nav ul li:last-child {
+    border-right: none;
+}
+.nav ul a {
+    white-space: nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+.nav li:hover ul { /* Display the dropdown on hover */
+    /*left: 0; /* Bring back on-screen when needed */
+    display: block;
+}
+.nav li:hover a { /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+    /*background-color: #6b0c36;*/
+    text-decoration: underline;
+}
+.nav li:hover ul a { /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+    text-decoration: none;
+}
+.nav li:hover ul li a:hover { /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+    color: #444444!important;
+    text-decoration: underline;
+    background-color: transparent;
+}
+.new-image {
+	height: 15px;
+}
+@media (min-width: 1081px) {
+	.nav li:last-child {
+		position: relative;
+	}
+	.nav li:last-child ul {
+		left: -150px;
+	}
+}
+@media (max-width: 1080px) {
+    .nav { display: table;  width: 90%;}
+	#logo { float: left; width: 70px; }
+}
+@media (max-width: 720px) {
+    .nav { display: table;  width: 80%;}
+    .nav a {
+        font-size: 15px!important;
+    }
+	.new-image {
+		height: 14px;
+	}
+}
+</style>
+</head>
+<body>
+<div id="logo">
+    <a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/">
+        <img src="https://sites.google.com/a/contractors.roche.com/dev-tools/logo2.png"/>
+    </a>
+</div>
+<ul class="nav">
+    <li>
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/">Dev Tools</a>
+	</li>
+    <li>
+        <a href="#">Continuous Integration</a>
+        <ul>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Bitbucket">Bitbucket</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Artifactory">Artifactory</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Bamboo">Bamboo</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Team Management</a>
+        <ul>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/RocheWIKI">Roche Wiki</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/JIRA">JIRA</a></li>
+			<li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Webforms">Webforms</a></li>
+        </ul>
+    </li>
+    <li>
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/CDS">Continuous Delivery</a>
+        <!--ul>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/CDS">CDS</a></li>
+        </ul-->
+    </li>
+    <li>
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/ELK">Log Management</a>
+        <!--ul>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/ELK">ELK</a></li>
+        </ul-->
+    </li>
+    <li>
+        <a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/AMS">Monitoring <img class="new-image" src="https://sites.google.com/a/contractors.roche.com/dev-tools/new-icon.png"/></a>
+        <!--ul>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/AMS">AMS</a></li>
+        </ul-->
+    </li>
+    <li>
+        <a href="#">Inspection/Security</a>
+        <ul>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Checkmarx">Checkmarx</a></li>
+            <li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/Sonar">Sonar</a></li>
+			<li><a target="_top" href="https://sites.google.com/a/contractors.roche.com/dev-tools/FishEye">FishEye & Crucible</a></li>
+        </ul>
+    </li>
+</ul>
+<script>
+	function testUrls()
+	{
+		//console.log(window.location);
+		//console.log(window.parent.location);
+		//console.log(document.referrer);
+		if (/devtoolstest/.test(document.referrer))
+		{
+			document.body.innerHTML = document.body.innerHTML.replace(/dev-tools/g,'devtoolstest');
+		}
+		
+		var url = (window.location != window.parent.location)
+					? document.referrer
+					: document.location.href;
+		for (var i = 0; i < document.links.length; i++) {
+			if (document.links[i].href == url) {
+				document.links[i].className = 'active';
+			}
+		}
+	}
+	window.onload = testUrls;
+</script>
+</body>
+</html>
+]]>
+    </Content> 
+</Module>
